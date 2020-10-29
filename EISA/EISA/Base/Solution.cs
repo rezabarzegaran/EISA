@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Data.SqlTypes;
 using System.Text;
-using System.Threading.Tasks;
 using EISA.Extension;
 using EISA.Model;
 
@@ -16,6 +15,8 @@ namespace EISA.Base
 
         public int Hyperperiod { get; }
 
+        public Dictionary<Task, Core> TaskMap;
+
         public Solution(Application_model _apps, Architecture_model _arch)
         {
             Fcp = new FCP(_arch);
@@ -24,11 +25,12 @@ namespace EISA.Base
             {
                 Apps.Add(new Applications(_app, getTasks(_apps,_app)));
             }
-
+            TaskMap = new Dictionary<Task, Core>();
             Hyperperiod = GetHyperperiod();
+            SortApps();
         }
 
-        public Solution(FCP _fcp, List<Applications> _apps)
+        public Solution(FCP _fcp, List<Applications> _apps, Dictionary<Task, Core> _taskmap)
         {
             Fcp = _fcp.Clone();
             Apps = new List<Applications>();
@@ -36,7 +38,13 @@ namespace EISA.Base
             {
                 Apps.Add(_app.Clone());
             }
+            TaskMap = new Dictionary<Task, Core>();
+            foreach(KeyValuePair<Task, Core> k in _taskmap)
+            {
+                TaskMap.Add(k.Key, k.Value);
+            }
             Hyperperiod = GetHyperperiod();
+            SortApps();
         }
 
         public int GetHyperperiod()
@@ -56,6 +64,11 @@ namespace EISA.Base
             return _hyperperiod;
         }
 
+        private void SortApps()
+        {
+            Apps.Sort((a, b) => (b.Cil.CompareTo(a.Cil)));
+        }
+
         private List<Application_model.Task> getTasks(Application_model _apps, Application_model.TaskGraph _app)
         {
             List<Application_model.Task> Tasks = new List<Application_model.Task>();
@@ -70,7 +83,7 @@ namespace EISA.Base
 
         public Solution Clone()
         {
-            return new Solution(Fcp, Apps);
+            return new Solution(Fcp, Apps, TaskMap);
         }
     }
 }
