@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<Application>
+		<Task Id="1" Name="T1" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="3" Period="100000">
+		</Task>
+		<Task Id="2" Name="T2" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="3" Period="100000">
+		</Task>
+		<Task Id="3" Name="T3" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="3" Period="100000">
+		</Task>
+		<Task Id="4" Name="T4" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="3" Period="100000">
+		</Task>
+		<Task Id="5" Name="T5" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="3" Period="100000">
+		</Task>
+		<Task Id="6" Name="T6" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="3" Period="100000">
+		</Task>
+		<Task Id="7" Name="T7" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="3" Period="100000">
+		</Task>
+		<Task Id="8" Name="T8" BCET="1000" WCET="1000" Deadline="50000" CpuId="0" CIL="3" Period="50000">
+		</Task>
+		<Task Id="9" Name="T9" BCET="2000" WCET="2000" Deadline="50000" CpuId="0" CIL="3" Period="50000">
+		</Task>
+		<Task Id="10" Name="T10" BCET="1000" WCET="1000" Deadline="50000" CpuId="0" CIL="3" Period="50000">
+		</Task>
+		<Task Id="11" Name="T11" BCET="2000" WCET="2000" Deadline="50000" CpuId="0" CIL="3" Period="50000">
+		</Task>
+		<Task Id="12" Name="T12" BCET="1000" WCET="1000" Deadline="50000" CpuId="0" CIL="2" Period="50000">
+		</Task>
+		<Task Id="13" Name="T13" BCET="2000" WCET="2000" Deadline="50000" CpuId="0" CIL="2" Period="50000">
+		</Task>
+		<Task Id="14" Name="T14" BCET="1000" WCET="1000" Deadline="50000" CpuId="0" CIL="2" Period="50000">
+		</Task>
+		<Task Id="15" Name="T15" BCET="2000" WCET="2000" Deadline="50000" CpuId="0" CIL="2" Period="50000">
+		</Task>
+		<Task Id="16" Name="T16" BCET="1000" WCET="1000" Deadline="50000" CpuId="0" CIL="2" Period="50000">
+		</Task>
+		<Task Id="17" Name="T17" BCET="2000" WCET="2000" Deadline="50000" CpuId="0" CIL="2" Period="50000">
+		</Task>
+		<Task Id="18" Name="T18" BCET="4000" WCET="4000" Deadline="100000" CpuId="0" CIL="1" Period="100000">
+		</Task>
+		<Task Id="19" Name="T19" BCET="4000" WCET="4000" Deadline="100000" CpuId="0" CIL="1" Period="100000">
+		</Task>
+		<Task Id="20" Name="T20" BCET="1000" WCET="1000" Deadline="50000" CpuId="0" CIL="2" Period="50000">
+		</Task>
+		<Task Id="21" Name="T21" BCET="1000" WCET="1000" Deadline="50000" CpuId="0" CIL="2" Period="50000">
+		</Task>
+		<Task Id="22" Name="T22" BCET="1000" WCET="1000" Deadline="50000" CpuId="0" CIL="2" Period="50000">
+		</Task>
+		<Task Id="23" Name="T23" BCET="2000" WCET="2000" Deadline="50000" CpuId="0" CIL="2" Period="50000">
+		</Task>
+		<Task Id="24" Name="T24" BCET="2000" WCET="2000" Deadline="50000" CpuId="0" CIL="2" Period="50000">
+		</Task>
+		<Task Id="25" Name="T25" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="2" Period="100000">
+		</Task>
+		<Task Id="26" Name="T26" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="2" Period="100000">
+		</Task>
+		<Task Id="27" Name="T27" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="2" Period="100000">
+		</Task>
+		<Task Id="28" Name="T28" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="2" Period="100000">
+		</Task>
+		<Task Id="29" Name="T29" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="2" Period="100000">
+		</Task>
+		<Task Id="30" Name="T30" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="2" Period="100000">
+		</Task>
+		<Task Id="31" Name="T31" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="2" Period="100000">
+		</Task>
+		<Task Id="32" Name="T32" BCET="1000" WCET="1000" Deadline="100000" CpuId="0" CIL="1" Period="100000">
+		</Task>
+		<Task Id="33" Name="T33" BCET="1000" WCET="1000" Deadline="100000" CpuId="0" CIL="1" Period="100000">
+		</Task>
+		<Task Id="34" Name="T34" BCET="4000" WCET="4000" Deadline="100000" CpuId="0" CIL="1" Period="100000">
+		</Task>
+		<Task Id="35" Name="T35" BCET="1000" WCET="1000" Deadline="100000" CpuId="0" CIL="1" Period="100000">
+		</Task>
+		<Task Id="36" Name="T36" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="1" Period="100000">
+		</Task>
+		<Task Id="37" Name="T37" BCET="1000" WCET="1000" Deadline="100000" CpuId="0" CIL="1" Period="100000">
+		</Task>
+		<Task Id="38" Name="T38" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="1" Period="100000">
+		</Task>
+		<Task Id="39" Name="T39" BCET="3000" WCET="3000" Deadline="100000" CpuId="0" CIL="1" Period="100000">
+		</Task>
+		<Task Id="40" Name="T40" BCET="1000" WCET="1000" Deadline="100000" CpuId="0" CIL="1" Period="100000">
+		</Task>
+		<Task Id="41" Name="T41" BCET="2000" WCET="2000" Deadline="100000" CpuId="0" CIL="1" Period="100000">
+		</Task>
+		<Task Id="42" Name="T42" BCET="1000" WCET="1000" Deadline="28000" EarliestActivation="0" CpuId="0" CIL="4" Period="25000">
+		</Task>
+		<Task Id="43" Name="T43" BCET="2000" WCET="2000" Deadline="28000" EarliestActivation="1000" CpuId="0" CIL="4" Period="25000">
+		</Task>
+		<Task Id="44" Name="T44" BCET="3000" WCET="3000" Deadline="28000" EarliestActivation="3000" CpuId="0" CIL="4" Period="25000">
+		</Task>
+		<Task Id="45" Name="T45" BCET="2000" WCET="2000" Deadline="28000" EarliestActivation="6000" CpuId="0" CIL="4" Period="25000">
+		</Task>
+		<Task Id="46" Name="T46" BCET="1000" WCET="1000" Deadline="28000" EarliestActivation="8000" CpuId="0" CIL="4" Period="25000">
+		</Task>
+		<Task Id="47" Name="T47" BCET="1000" WCET="1000" Deadline="28000" EarliestActivation="9000" CpuId="0" CIL="4" Period="25000">
+		</Task>
+		<Task Id="48" Name="T48" BCET="2000" WCET="2000" Deadline="28000" EarliestActivation="10000" CpuId="0" CIL="4" Period="25000">
+		</Task>
+
+		<DAG Name="Engine" Inorder="false" CA ="false">
+			<Runnable Id="1"/>
+			<Runnable Id="2"/>
+			<Runnable Id="3"/>
+			<Runnable Id="4"/>
+			<Runnable Id="5"/>
+			<Runnable Id="6"/>
+			<Runnable Id="7"/>
+		</DAG>
+
+		<DAG Name="GearBox" Inorder="false" CA ="false">
+			<Runnable Id="8"/>
+			<Runnable Id="9"/>
+			<Runnable Id="10"/>
+			<Runnable Id="11"/>
+		</DAG>
+
+		<DAG Name="ABS" Inorder="false" CA ="false">
+			<Runnable Id="12"/>
+			<Runnable Id="13"/>
+			<Runnable Id="14"/>
+			<Runnable Id="15"/>
+			<Runnable Id="16"/>
+			<Runnable Id="17"/>
+		</DAG>
+
+		<DAG Name="DynamicCorrector" Inorder="false" CA ="false">
+			<Runnable Id="18"/>
+			<Runnable Id="19"/>
+		</DAG>
+
+		<DAG Name="Suspension" Inorder="false" CA ="false">
+			<Runnable Id="20"/>
+			<Runnable Id="21"/>
+			<Runnable Id="22"/>
+			<Runnable Id="23"/>
+			<Runnable Id="24"/>
+		</DAG>
+
+		<DAG Name="BodyWork" Inorder="false" CA ="false">
+			<Runnable Id="25"/>
+			<Runnable Id="26"/>
+			<Runnable Id="27"/>
+			<Runnable Id="28"/>
+			<Runnable Id="29"/>
+			<Runnable Id="30"/>
+			<Runnable Id="31"/>
+		</DAG>
+
+		<DAG Name="PassangerComfort" Inorder="false" CA ="false">
+			<Runnable Id="32"/>
+			<Runnable Id="33"/>
+			<Runnable Id="34"/>
+			<Runnable Id="35"/>
+			<Runnable Id="36"/>
+			<Runnable Id="37"/>
+			<Runnable Id="38"/>
+			<Runnable Id="39"/>
+			<Runnable Id="40"/>
+			<Runnable Id="41"/>
+		</DAG>
+
+		<DAG Name="RadarCruise" Inorder="true" CA ="true">
+			<Runnable Id="42"/>
+			<Runnable Id="43"/>
+			<Runnable Id="44"/>
+			<Runnable Id="45"/>
+			<Runnable Id="46"/>
+			<Runnable Id="47"/>
+			<Runnable Id="48"/>
+		</DAG>
+</Application>
