@@ -16,6 +16,9 @@ namespace EISA.Model
         [XmlElement("DAG")]
         public List<TaskGraph> Apps { get; set; }
 
+        [XmlElement("Message")]
+        public List<Flow> Flows { get; set; }
+
         public class Task
         {
             public Task()
@@ -23,8 +26,8 @@ namespace EISA.Model
                 MaxJitter = -1;
             }
 
-            [XmlAttribute("Id")]
-            public int Id { get; set; }
+            [XmlAttribute("Name")]
+            public string Name { get; set; }
 
             [XmlAttribute("WCET")]
             public int WCET { get; set; }
@@ -41,8 +44,8 @@ namespace EISA.Model
             [XmlAttribute("CIL")]
             public int Cil { get; set; }
 
-            [XmlAttribute("CpuId")]
-            public int CpuId { get; set; }
+            [XmlAttribute("CpuName")]
+            public string CpuName { get; set; }
 
         }
 
@@ -61,10 +64,36 @@ namespace EISA.Model
             public List<Runnable> Runnables { get; set; }
         }
 
+        public class Flow
+        {
+            public Flow()
+            {
+            }
+
+            [XmlAttribute("Name")]
+            public string Name { get; set; }
+
+            [XmlAttribute("Size")]
+            public int Size { get; set; }
+
+            [XmlAttribute("Period")]
+            public int Period { get; set; }
+
+            [XmlAttribute("Deadline")]
+            public int Deadline { get; set; }
+
+            [XmlAttribute("Priority")]
+            public int Priority { get; set; }
+
+        }
+
         public class Runnable
         {
-            [XmlAttribute("Id")]
-            public int Id { get; set; }
+            [XmlAttribute("Name")]
+            public string Name { get; set; }
+
+            [XmlAttribute("Type")]
+            public string Type { get; set; }
         }
     }
 }

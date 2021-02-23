@@ -8,9 +8,10 @@ namespace EISA.Model
 {
     public class Task
     {
-        public int Id { get;}
+        public string Name { get;}
 
         public int WCET { get;}
+        public int RelWCET { get; private set; }
 
         public int Period { get;}
 
@@ -20,35 +21,61 @@ namespace EISA.Model
 
         public int Cil { get;}
 
-        public int CpuId { get;}
+        public string FN_Name { get;}
+
+        public int Hyperperiod { get; private set; }
+
+        public int N_Instances { get; private set; }
 
         public double Workload => (double) WCET / Period;
         public Task(Application_model.Task _task)
         {
-            Id = _task.Id;
+            Name = _task.Name;
             WCET = _task.WCET;
             Period = _task.Period;
             Deadline = _task.Deadline;
             MaxJitter = _task.MaxJitter;
             Cil = _task.Cil;
-            CpuId = _task.CpuId;
+            FN_Name = _task.CpuName;
 
         }
 
-        public Task(int _id, int _wcet, int _period, int _deadline, int _maxjitter, int _cil, int _cpuid)
+        public Task(string _name, int _wcet, int _period, int _deadline, int _maxjitter, int _cil, string _fn_name, int _hyperperiod)
         {
-            Id = _id;
+            Name = _name;
             WCET = _wcet;
             Period = _period;
             Deadline = _deadline;
             MaxJitter = _maxjitter;
             Cil = _cil;
-            CpuId = _cpuid;
+            FN_Name = _fn_name;
+            SetHyperperiod(_hyperperiod);
+            SetN_Instances();
+        }
+
+        public void SetRelWCET(int gcd)
+        {
+            RelWCET = WCET / gcd;
+        }
+        public void Init(int _hyperperiod)
+        {
+            SetHyperperiod(_hyperperiod);
+            SetN_Instances();
+        }
+
+        private void SetHyperperiod(int val)
+        {
+            Hyperperiod = val;
+        }
+
+        private void SetN_Instances()
+        {
+            N_Instances = Hyperperiod / Period;
         }
 
         public Task Clone()
         {
-            return new Task(Id, WCET,Period,Deadline,MaxJitter,Cil,CpuId);
+            return new Task(Name, WCET,Period,Deadline,MaxJitter,Cil,FN_Name, Hyperperiod);
         }
     }
 }

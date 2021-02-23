@@ -13,12 +13,27 @@ namespace EISA
     {
         static void Main(string[] args)
         {
+            // Input Data
             string appsInput = @"Data\Tasks.xml";
             string archInput = @"Data\Config.xml";
+            List<Result> Results;
+
+            // Data Loader
             (Application_model apps, Architecture_model arch) scheme = DataLoader.Load(appsInput, archInput);
             Solution Problem = new Solution(scheme.apps, scheme.arch);
-            Solver solver = new Solver(Problem);
-            solver.Run();
+            OptiSolver solver = new OptiSolver(Problem);
+
+            //Running
+            solver.Init();
+            Results = solver.Run();
+
+            //Data Unloader
+            Unloader dataUnloader = new Unloader();
+            dataUnloader.Save(Results);
+
+            //End Key
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
 
         }
     }

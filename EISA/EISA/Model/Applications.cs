@@ -13,9 +13,10 @@ namespace EISA.Model
         public bool InOrder { get; }
         public bool CA { get; }
         public List<Task> Tasks { get; }
+        public List<Flow> Flows { get; }
         public int Cil => Tasks.First().Cil;
         public double Workload => getWorkload();
-        public Applications(Application_model.TaskGraph _apps, List<Application_model.Task> _tasks)
+        public Applications(Application_model.TaskGraph _apps, List<Application_model.Task> _tasks, List<Application_model.Flow> _In_flows, List<Application_model.Flow> _Out_flows)
         {
             Name = _apps.Name;
             InOrder = _apps.Order;
@@ -25,10 +26,19 @@ namespace EISA.Model
             {
                 Tasks.Add(new Task(_task));
             }
+            Flows = new List<Flow>();
+            foreach (Application_model.Flow _flow in _In_flows)
+            {
+                Flows.Add(new Flow(_flow, Flow.Flow_Type.Input)) ;
+            }
+            foreach (Application_model.Flow _flow in _Out_flows)
+            {
+                Flows.Add(new Flow(_flow, Flow.Flow_Type.Output));
+            }
 
         }
 
-        public Applications(string _name, bool _order, bool _ca, List<Task> _tasks)
+        public Applications(string _name, bool _order, bool _ca, List<Task> _tasks, List<Flow> _flows)
         {
             Name = _name;
             InOrder = _order;
@@ -37,6 +47,11 @@ namespace EISA.Model
             foreach (Task _task in _tasks)
             {
                 Tasks.Add(_task.Clone());
+            }
+            Flows = new List<Flow>();
+            foreach (Flow _flow in _flows)
+            {
+                Flows.Add(_flow.Clone());
             }
         }
 
@@ -61,10 +76,27 @@ namespace EISA.Model
 
             return periods;
         }
+        public List<int> getFlowPeriods()
+        {
+            List<int> periods = new List<int>();
+            foreach (Flow _flow in Flows)
+            {
+                periods.Add(_flow.Period);
+            }
+
+            return periods;
+        }
+
+        public void Init(int val)
+        {
+            Flows.ForEach(x => x.Init(val));
+            Tasks.ForEach(x => x.Init(val));
+        }
+
 
         public Applications Clone()
         {
-            return new Applications(Name, InOrder, CA, Tasks);
+            return new Applications(Name, InOrder, CA, Tasks, Flows);
         }
     }
 }

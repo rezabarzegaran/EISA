@@ -9,21 +9,21 @@ namespace EISA.Model
     public class Core
     {
         public int Id { get; }
-        public int Parent_Id { get; }
+        public string Parent_Name { get; }
         public int Macrotick { get; }
         public double Utilization { get; set; }
-        public Core(int _id, int _parent_id, int _macrotick)
+        public Core(int _id, string _parent_name, int _macrotick)
         {
             Id = _id;
-            Parent_Id = _parent_id;
+            Parent_Name = _parent_name;
             Macrotick = _macrotick;
             Utilization = 0;
         }
 
-        public Core(int _id, int _parent_id, int _macrotick, bool a)
+        public Core(int _id, string _parent_name, int _macrotick, bool a)
         {
             Id = _id;
-            Parent_Id = _parent_id;
+            Parent_Name = _parent_name;
             Macrotick = _macrotick;
             Utilization = 0;
         }
@@ -42,7 +42,7 @@ namespace EISA.Model
 
         public Core Clone()
         {
-            return new Core(Id, Parent_Id, Macrotick, true);
+            return new Core(Id, Parent_Name, Macrotick, true);
         }
 
     }
