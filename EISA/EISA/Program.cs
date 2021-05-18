@@ -32,6 +32,7 @@ namespace EISA
             dataUnloader.Save(Results);
 
             //End Key
+            
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
 

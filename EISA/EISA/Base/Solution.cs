@@ -235,6 +235,42 @@ namespace EISA.Base
             return tasks;
         }
 
+        public List<string> getLinks()
+        {
+            List<string> links = new List<string>();
+            foreach (KeyValuePair<string, List<string>> k in RouteMap)
+            {
+                for (int i = 0; i < (k.Value.Count - 1); i++)
+                {
+                    string link = k.Value[i] + ":" + k.Value[i + 1];
+                    if (!links.Contains(link))
+                    {
+                        links.Add(link);
+                    }
+                }
+            }
+
+            return links;
+        }
+
+        public List<string> getCores()
+        {
+            List<string> cores = new List<string>();
+            foreach (var Fn in Fcp.FNs)
+            {
+                foreach (Core core in Fn.Cores)
+                {
+                    string _core = Fn.Name + ":" + core.Id.ToString();
+                    if (!cores.Contains(_core))
+                    {
+                        cores.Add(_core);
+                    }
+                }
+            }
+
+            return cores;
+        }
+
         //Clone Function
         public Solution Clone()
         {
